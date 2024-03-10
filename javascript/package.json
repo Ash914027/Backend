@@ -1,0 +1,16 @@
+{
+  "name": "ashish",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Asynchronous function.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ashish": "^1.0.1",
+    "lodash": "^4.17.21",
+    "sanuj_json": "^1.0.0"
+  }
+}
