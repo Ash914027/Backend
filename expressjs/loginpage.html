@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    input{
+        margin: 10px;
+        padding: 10px;
+    }
+    h1{
+        text-align: center;
+    }
+    input[type="submit"]{
+        background-color: #4CAF50;
+        color: white;
+        padding: 15px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+    input[type="submit"]:hover{
+        opacity: 0.8;
+    }
+    input[type="text"], input[type="email"]{
+        width: 100%;
+    }
+    input[type="text"], input[type="email"], input[type="password"]{
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    input[type="submit"]{
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+    input[type="submit"]:hover{
+        opacity: 0.8;
+    }
+    input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus{
+        background-color: #f2f2f2;
+    }
+    input[type="submit"]{
+        background-color: #45a049;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+    input[type="submit"]:hover{
+        opacity: 0.8;
+    }
+    input[type="text"], input[type="email"], input[type="password"]{
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    input[type="submit"]{
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+    }
+</style>
+<body>
+    <h1>Login page</h1>
+    <form action="/profile" method="POST" >
+        <input  type="text" name="name" placeholder="Enter your name" required>
+        <label for="email">Email:</label>
+        <input  type="email" name="email" placeholder="Enter your email" required>
+        <label for="password">Password:</label>
+        <input type="submit" value="login">
+
+
+    </form>
+    <script src="middlewareexpress.js">
+
+    </script>
+</body>
+</html>
