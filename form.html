@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/socket.io/socket.io.js"></script> // Move the script tag to the head section
+</head>
+<body>
+    <li id="list"></li>
+    <form id="form">
+        <input type="text" id="input">
+        <button type="submit" id="submit">Send</button>
+    </form>
+    <!-- <script src ='/socket.io/socket.io.js'></script> // Add the import statement for the 'io' object -->
+    <script>
+        const socket=io();
+        const form=document.querySelector('form');
+        const input=document.getElementById('input');
+        const list=document.getElementById('list');
+        form.addEventListener('submit',e=>{ // Change the event listener to submit
+            e.preventDefault();
+            if(input.value){
+                socket.emit('chat message',input.value);
+                input.value='';
+            }
+            socket.on('chat message',msg=>{
+                const item=document.createElement('li');
+                item.textContent=msg;
+                list.appendChild(item);
+            });
+            //prompt to user to enter their name
+            const username=prompt('please enter your  name');
+            socet.emit('join',username);
+            socket.on('')
+        });
+    </script>
+</body>
+</html>
