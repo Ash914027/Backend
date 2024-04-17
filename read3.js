@@ -53,59 +53,55 @@ server.listen(port,()=>{
 });
 
 
-
-
-
-
 // //get data from html form and save it to json file
-//  const http=require('http');
-//   const fs=require('fs');
-//     const queryString=require('querystring');
-//     http.createServer((req,res)=>{
-//         if(req.url=="/")
-//         {
-//             fs.readFile("./index.html",(err,data)=>{
-//                 if(err)
-//                 {
-//                     console.error(err);
-//                     res.statusCode=500;
-//                     res.end("An error occurred while reading the file");
-//                 }
-//                 else
-//                 {
-//                     res.writeHead(200,{'Content-Type':'text/html'});
-//                     res.end(data);
-//                 }
-//             });
-//         }
-//         else if(req.url=="/save.json" && req.method==="POST")
-//         {
-//             let body="";
-//             req.on('data',(chunk)=>{
-//                 body+=chunk;
-//             });
-//             req.on('end',()=>{
-//                 const jsondata=queryString.parse(body).jsonData;
-//                 const jsonStrings=JSON.stringify(jsondata);
-//                 fs.writeFile("save.json",jsonStrings,'utf-8',(err)=>{
-//                     if(err)
-//                     {
-//                         console.error(err);
-//                         res.statusCode=500;
-//                         res.end("An error occurred while writing to the file");
-//                     }
-//                     else
-//                     {
-//                         res.end("Operation was successful");
-//                     }
-//                 });
-//             });
-//         }
-//         else
-//         {
-//             res.statusCode=405;
-//             res.end("Method Not Allowed");
-//         }
-//     }).listen(3000);
+ const http=require('http');
+  const fs=require('fs');
+    const queryString=require('querystring');
+    http.createServer((req,res)=>{
+        if(req.url=="/")
+        {
+            fs.readFile("./index.html",(err,data)=>{
+                if(err)
+                {
+                    console.error(err);
+                    res.statusCode=500;
+                    res.end("An error occurred while reading the file");
+                }
+                else
+                {
+                    res.writeHead(200,{'Content-Type':'text/html'});
+                    res.end(data);
+                }
+            });
+        }
+        else if(req.url=="/save.json" && req.method==="POST")
+        {
+            let body="";
+            req.on('data',(chunk)=>{
+                body+=chunk;
+            });
+            req.on('end',()=>{
+                const jsondata=queryString.parse(body).jsonData;
+                const jsonStrings=JSON.stringify(jsondata);
+                fs.writeFile("save.json",jsonStrings,'utf-8',(err)=>{
+                    if(err)
+                    {
+                        console.error(err);
+                        res.statusCode=500;
+                        res.end("An error occurred while writing to the file");
+                    }
+                    else
+                    {
+                        res.end("Operation was successful");
+                    }
+                });
+            });
+        }
+        else
+        {
+            res.statusCode=405;
+            res.end("Method Not Allowed");
+        }
+    }).listen(3000);
 
 
