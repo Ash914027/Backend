@@ -6,3 +6,8 @@
 //It is popular Object Relation Mapping (ORM) library for Node.js.
 //example of object with properties in table
 const { Sequelize, DataTypes } = require('sequelize');
+const sequelize =new Sequelize('todos', 'postgres', 'root', {
+    host: 'localhost',
+    dialect: 'postgres',
+ } );
+ module.exports=sequelize;
