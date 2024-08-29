@@ -1,7 +1,7 @@
 
 <img title="Javascript" alt="Alt text"  align="right" src="https://github.com/Ash914027/Javascript/assets/119170180/98ad18c0-4dcd-4f2c-934e-c530aa51af07">
 
-# Basic and advanced javascript
+# 🔢Basic and advanced javascript
 
 ## variable in javascript
 Variables are containers for storing data values in a program.
@@ -13,7 +13,7 @@ var a = "I am global";
 let b = "I am global";
 
 
-## Objects in javascript
+##🚗 Objects in javascript
 
 // Object literal notation
 
@@ -32,7 +32,7 @@ let car = {
     }
   };
 
-## loops
+## 🔄loops
 1. for Loop:
 
 Executes a block of code a specified number of times.
@@ -42,7 +42,7 @@ for (let i = 0; i < 5; i++) {
     console.log(i);
   }
 
-## Arrays in javascript
+## 🍏Arrays in javascript
 // Creating an array
 
 let fruits = ["apple", "banana", "orange", "grape"];
