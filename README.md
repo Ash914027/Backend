@@ -3,7 +3,7 @@
 
 # 🔢Basic and advanced javascript
 
-## variable in javascript
+# variable in javascript
 Variables are containers for storing data values in a program.
 They provide named references to memory locations, allowing you to manipulate data.
 In JavaScript, variables are declared using the keywords var, let, or const.
@@ -13,7 +13,7 @@ var a = "I am global";
 let b = "I am global";
 
 
-##🚗 Objects in javascript
+# 🍏Objects in javascript
 
 // Object literal notation
 
@@ -108,6 +108,6 @@ function randomFunction(){
     console.log("Hey I am callbackfunction");
 }
 parentFunction("Random String",randomFunction);
-![image](https://github.com/Ash914027/Backend/assets/119170180/c3c8d2e0-3190-4064-9271-f3b0040f574a)
+
 
 
